@@ -17,13 +17,13 @@ function createicons() {
     sips -z 128 128 $ICON_PATH --out pngpic.iconset/icon_128x128.png
     sips -z 256 256 $ICON_PATH --out pngpic.iconset/icon_256x256.png
     sips -z 512 512 $ICON_PATH --out pngpic.iconset/icon_512x512.png
-    sips -z 16 16 $ICON_PATH --out pngpic.iconset/icon_1024x1024.png
+    sips -z 1024 1024 $ICON_PATH --out pngpic.iconset/icon_1024x1024.png
 
     # 生成icns
     iconutil -c icns pngpic.iconset -o icon.icns
 
     # 生成ico 文件
-    icotool -c pngpic.iconset/icon_128x128.png -o icon.ico
+    icotool -c pngpic.iconset/icon_256x256.png -o icon.ico
 
     rm -rf icons
     mkdir icons

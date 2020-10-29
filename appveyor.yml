@@ -1,0 +1,24 @@
+platform:
+  - x64
+
+cache:
+  - node_modules
+  - '%APPDATA%\npm-cache'
+  - '%USERPROFILE%\.electron'
+
+install:
+  - ps: Install-Product node 8 x64
+  - npm install
+
+build_script:
+  - npm run dist
+
+test: off
+
+branches:
+  only:
+    - master
+
+environment:
+  my_variable:
+    secure: zXPl/tv3g9owHkcmB3pmul07Vd2aSxjLJiov6aorKHkQI4RuZbYiRF2l+LV1an7h

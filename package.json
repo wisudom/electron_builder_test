@@ -28,5 +28,35 @@
     "eslint": "^7.3.1",
     "typescript": "^3.9.5"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "build": {
+    "appId": "com.wisudom.test",
+    "mac": {
+      "category": "public.app-category.utilities"
+    },
+    "dmg": {
+      "contents": [
+        {
+          "x": 110,
+          "y": 150
+        },
+        {
+          "x": 240,
+          "y": 150,
+          "type": "link",
+          "path": "/Applications"
+        }
+      ]
+    },
+    "win": {
+      "target": "nsis"
+    },
+    "linux": {
+      "category": "Utility",
+      "target": [
+        "deb",
+        "AppImage"
+      ]
+    }
+  }
 }

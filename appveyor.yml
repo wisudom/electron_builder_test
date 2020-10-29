@@ -17,8 +17,8 @@ test: off
 
 branches:
   only:
-    - master
+    - main
 
 environment:
-  my_variable:
+  GH_TOKEN:
     secure: zXPl/tv3g9owHkcmB3pmul07Vd2aSxjLJiov6aorKHkQI4RuZbYiRF2l+LV1an7h

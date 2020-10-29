@@ -6,7 +6,9 @@
     "build": "tsc",
     "watch": "tsc -w",
     "lint": "eslint -c .eslintrc --ext .ts ./src",
-    "start": "npm run build && electron ./dist/main.js"
+    "start": "npm run build && electron ./dist/main.js",
+    "postinstall": "electron-builder install-app-deps",
+    "dist": "electron-builder --publish onTagOrDraft"
   },
   "repository": "https://github.com/wisudom/electron_builder_test",
   "keywords": [

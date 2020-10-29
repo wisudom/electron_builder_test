@@ -1,7 +1,8 @@
 {
   "name": "electron_builder_test",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "A minimal Electron application written with Typescript",
+  "main": "dist/main.js",
   "scripts": {
     "build": "tsc",
     "watch": "tsc -w",
@@ -24,7 +25,7 @@
     "@types/node": "^12.19.3",
     "@typescript-eslint/eslint-plugin": "^3.4.0",
     "@typescript-eslint/parser": "^3.4.0",
-    "electron": "^9.3.3",
+    "electron": "^10.1.5",
     "electron-builder": "^22.9.1",
     "eslint": "^7.3.1",
     "typescript": "^3.9.5"
@@ -32,8 +33,14 @@
   "dependencies": {
     "cnpm": "^6.1.1"
   },
+  "files": [
+    "dist/**/*"
+  ],
   "build": {
     "appId": "com.wisudom.test",
+    "directories": {
+      "output": "build"
+    },
     "mac": {
       "category": "public.app-category.utilities"
     },

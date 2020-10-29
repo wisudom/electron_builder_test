@@ -15,9 +15,7 @@ build_script:
 
 test: off
 
-branches:
-  only:
-    - main
+skip_non_tags: true
 
 environment:
   GH_TOKEN:

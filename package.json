@@ -41,6 +41,12 @@
     "directories": {
       "output": "build"
     },
+    "nsis": {
+      "oneClick": false,
+      "allowElevation": true,
+      "allowToChangeInstallationDirectory": true,
+      "shortcutName": "test"
+    },
     "mac": {
       "category": "public.app-category.utilities"
     },
@@ -59,7 +65,10 @@
       ]
     },
     "win": {
-      "target": "nsis"
+      "target": [
+        "nsis",
+        "zip"
+      ]
     },
     "linux": {
       "category": "Utility",

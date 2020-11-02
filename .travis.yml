@@ -1,7 +1,8 @@
-osx_image: xcode12.1
+osx_image: xcode12
+language: node_js
 
 dist: trusty
-sudo: false
+sudo: true
 
 language: node_js
 node_js: "12"
@@ -10,9 +11,10 @@ env:
   global:
     - ELECTRON_CACHE=$HOME/.cache/electron
     - ELECTRON_BUILDER_CACHE=$HOME/.cache/electron-builder
+    - secure: UDZ9XS31sZ3y6A7kSpWj/vGiNG8iufG7HWjEKyOpdAJej89+7yiLJ2yFsuMNhyOUgw1IOmm6vKPW4R4qaqwYJYfraFpWN7NtoGFka8OWOrq710fSIzbh8asObst3ma4UIA7CKOyS/du6LlspzDvVRWr71I6BSTsROWXlNX89gG6CX8eNfFahn2sOgM4P2u1vcYWYZvSnpl0OhhuIMtM7wC8fJ2Bf5F3n4Sd/MJA5DVmvVSE15cw4jKh8oggHDDa6KwnCgfUZyvxeBdkDBfyMuV/UXdjUdVNr+szDHZwf3rD8EO7gR8NVkiAja2zlmsOP0TP4hiEfwKkqo7Ekk+wgpLqSuG8CdqrDJt+z8QicdZmYyNzVv1RwMiaLIOxQejotx6pCuckDzDBAN+XQbXjwWAY72oyHBqFeJXc7LE4zDNXz5t/JW9hLU/BWdnRQLDMiiiTylyRCaMKO13zjWglh055D5RLKG4QgyLfCoPLESLlfLPPqk98wF2GxfhADWsmQahjCDYOa6SghPsaMnNseADc1yCqUEmt6PzlgxisMn4RLDkXNNHlBkAPQnNE/pyKgdP/NPPkKdS0ceWkzvF9D7EM0epASYGMQpBS9wmhaXlcZKb4iaa4cTE1J/7e4t4sK7+DiXpGJSyigO5a8PHLoNw1Xy2X4+Gm/lFr2++w3BqI=""
 
 os:
-  - linux
+  # - linux
   - osx
 
 cache:
@@ -27,14 +29,7 @@ script:
 
 branches:
   only:
-  - main
+    - main
 
-deploy:
-  provider: pages
-  skip-cleanup: true
-  github-token: $GH_TOKEN  # Set in travis-ci.org dashboard, marked secure https://docs.travis-ci.com/user/deployment/pages/#Setting-the-GitHub-token
-  target-branch: gh-pages
-  local-dir: dist
-  on:
-    tags: true
+
     
